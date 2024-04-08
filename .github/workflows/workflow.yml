@@ -1,5 +1,11 @@
 name: Build Client
 
+# 监听版本号变化
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
 jobs:
   ios:
     runs-on: macos-latest
